@@ -17,14 +17,16 @@ Each team works on one quantitative-finance research question throughout the sem
 * **Weeks 9–10:** Finalize the paper, reproducible code, and presentation. Deliver the selected trading strategy with its signal logic, universe, position-sizing rules, execution assumptions, risk limits, monitoring plan, and relevant backtest and risk analysis for review before inclusion in the club's paper-trading portfolio.
 
 ### Suggested Research Topics
-* Momentum versus mean reversion in equities or ETFs, including transaction costs and out-of-sample performance.
-* Portfolio construction: compare equal-weighted, minimum-variance, and factor-based portfolios.
-* Factor investing: evaluate whether CAPM or Fama-French factors explain the returns of a selected fund or sector.
-* Volatility forecasting: compare historical, GARCH, and option-implied volatility forecasts.
-* Statistical arbitrage: investigate cointegration and pairs-trading opportunities within an industry or asset class.
-* Machine-learning prediction: compare regression or tree-based models for forecasting stock returns or price direction against a simple baseline.
-* Machine-learning feature analysis: study whether technical indicators, lagged returns, or market variables improve out-of-sample predictions.
-* Quantitative risk management: compare VaR and Expected Shortfall under different distributional assumptions and market-stress scenarios.
+* **Volatility-managed momentum:** Does scaling momentum exposure by realized volatility improve out-of-sample risk-adjusted returns and reduce drawdowns after transaction costs?
+* **Momentum versus mean reversion across market regimes:** Can volatility and trend conditions identify when a momentum or mean-reversion strategy should be given greater portfolio weight?
+* **Cointegration-based sector pairs trading:** Can dynamically selected cointegrated pairs produce market-neutral returns after accounting for hedge-ratio instability, slippage, and liquidity constraints?
+* **Factor timing:** Can market and macroeconomic signals improve the timing of exposure to value, size, profitability, investment, and momentum factors?
+* **Machine-learning cross-sectional ranking:** Can lagged returns, volatility, liquidity, and technical features improve stock selection relative to a simple momentum or equal-weight baseline?
+* **Machine-learning trade selection for pairs trading:** Can a model identify which statistically valid pairs are most likely to converge profitably?
+* **Trend following with tail-risk controls:** Can volatility scaling, drawdown limits, or defensive hedges reduce crash losses without eliminating the return benefit of trend following?
+* **Options-based tail-risk protection:** Can a systematic protective-put or put-spread overlay improve portfolio resilience at an acceptable long-run cost?
+* **Delta-hedged volatility strategies:** Does trading the difference between implied and realized volatility generate robust returns after hedging costs and option-market frictions?
+* **Multi-signal portfolio construction:** Does combining momentum, value, mean reversion, and defensive signals with portfolio-level risk limits improve stability and reduce factor concentration?
 
 ---
 
