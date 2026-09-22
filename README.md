@@ -1,20 +1,20 @@
-# 8-Week Quantitative Finance Roadmap
+# 10-Week Quantitative Finance Roadmap
 
 ## Program Overview
-This curriculum bridges traditional economic and corporate finance theory with quantitative implementation, machine learning, time-series econometrics, and algorithmic backtesting in Python. 
+This curriculum bridges traditional economic and finance theory with quantitative implementation, machine learning, time-series econometrics, and algorithmic backtesting in Python. 
 
 * **Prerequisites:** Introductory Micro/Macroeconomics, basic statistics, Linear Algebra, Multivariable Calculus, and basic Python familiarity (`pandas`, `numpy`).
 * **Core Tooling:** `numpy`, `pandas`, `scipy`, `statsmodels`, `scikit-learn`, `matplotlib`/`seaborn`, `yfinance`.
 
 ## Semester Research Project
-Students work in teams of two on one quantitative-finance research question throughout the semester. The project is an independent track that can draw on relevant course material as needed; teams are not expected to use every weekly topic. Each team submits a short research report, reproducible code, and a final presentation.
+Each team works on one quantitative-finance research question throughout the semester. The project is an independent track that can draw on relevant course material from the learning sessions as needed; the team is not expected to use every weekly topic. The project must produce a fully specified trading strategy for inclusion in the club's paper-trading portfolio, supported by a short research paper, reproducible code, and a final presentation.
 
 ### Project Milestones
 * **Weeks 1–2:** Select a topic, formulate a research question, identify the required data, and submit a brief proposal describing the hypothesis, assets, methods, and evaluation criteria.
-* **Weeks 3–4:** Complete the literature and data review and present preliminary descriptive results. Apply portfolio or factor methods only where they support the research question.
-* **Weeks 5–6:** Implement the core empirical method and document choices about estimation, validation, and avoidance of look-ahead bias. Use time-series or statistical-arbitrage methods where appropriate.
+* **Weeks 3–5:** Complete the literature and data review and present preliminary descriptive results. Apply AI-assisted research, backtesting, or factor methods only where they support the research question.
+* **Week 6:** Implement the core empirical method and document choices about estimation, validation, and avoidance of look-ahead bias. Use statistical-arbitrage methods where appropriate.
 * **Week 7:** Apply a directional or cross-sectional ranking model only if it is appropriate to the research question, and evaluate its robustness, economic value, and risk of overfitting.
-* **Week 8:** Submit the final report, reproducible code, and presentation, including the relevant backtest and risk analysis for the project.
+* **Weeks 9–10:** Finalize the paper, reproducible code, and presentation. Deliver the selected trading strategy with its signal logic, universe, position-sizing rules, execution assumptions, risk limits, monitoring plan, and relevant backtest and risk analysis for review before inclusion in the club's paper-trading portfolio.
 
 ### Suggested Research Topics
 * Momentum versus mean reversion in equities or ETFs, including transaction costs and out-of-sample performance.
@@ -30,7 +30,7 @@ Students work in teams of two on one quantitative-finance research question thro
 
 ## Phase 1: Foundations (Weeks 1–2)
 
-### Week 1: Python for Financial Data & Market Microstructure
+### Week 1: Python for Financial Data & Market Microstructure (28/9 to 4/10)
 * **Core Topics:**
   * Order book mechanics: bids, asks, market depth, bid-ask spread, slippage.
   * Tick-level vs. OHLCV data.
@@ -44,7 +44,7 @@ Students work in teams of two on one quantitative-finance research question thro
 
 ---
 
-### Week 2: Momentum & Mean-Reversion Algorithmic Strategies
+### Week 2: Momentum & Mean-Reversion Algorithmic Strategies (5/10 to 11/10)
 * **Core Topics:**
   * Signal generation logic: Simple Moving Averages (SMA), Exponential Moving Averages (EMA), Relative Strength Index (RSI), Bollinger Bands.
   * Common backtesting pitfalls: look-ahead bias, survivorship bias, data snooping.
@@ -57,22 +57,37 @@ Students work in teams of two on one quantitative-finance research question thro
 
 ---
 
-## Phase 2: Quantitative Portfolio Management (Weeks 3–4)
+## Phase 2: AI-Assisted Strategy Research & Quantitative Portfolio Management (Weeks 3–5)
 
-### Week 3: Modern Portfolio Theory (MPT) & The Efficient Frontier
+### Week 3: Proper Backtesting & Strategy Validation (12/10 to 18/10)
 * **Core Topics:**
-  * Markowitz mean-variance framework: expected return vector and covariance matrix $\Sigma$.
-  * Global Minimum Variance (GMV) portfolio, Capital Allocation Line (CAL), and the Tangency Portfolio.
-  * Covariance matrix estimation errors and shrinkage estimators (Ledoit-Wolf).
+  * Backtest design: defining the investment universe, signal timing, execution timing, portfolio rules, and rebalancing frequency.
+  * Avoiding look-ahead bias, survivorship bias, data leakage, and unrealistic fills.
+  * In-sample versus out-of-sample testing, walk-forward validation, benchmark selection, and sensitivity analysis.
 * **Technical Skills:**
-  * Convex optimization using `scipy.optimize`.
-  * Portfolio constraint handling (long-only, target return, sector-bound constraints).
+  * Building event-driven or vectorized backtests with point-in-time data and explicit signal-to-trade delays.
+  * Modeling commissions, bid-ask spreads, slippage, turnover, liquidity limits, and position constraints.
+  * Evaluating returns, volatility, Sharpe and Sortino ratios, maximum drawdown, turnover, capacity, and statistical uncertainty.
 * **Deliverable / Lab:**
-  * **Lab 3:** Build an interactive Efficient Frontier generator for a 10-asset universe. Run an out-of-sample backtest comparing the theoretical Tangency Portfolio against an equal-weighted ($1/N$) benchmark.
+  * **Lab 3:** Build a reproducible backtest for a rules-based strategy, with separate development and out-of-sample periods, realistic execution costs, explicit position limits, and a benchmark comparison. Report performance, drawdowns, turnover, exposure, and robustness across parameter and cost assumptions.
 
 ---
 
-### Week 4: Multi-Factor Models & Asset Pricing
+### Week 4: AI-Assisted Quantitative Research & Strategy Development (19/10 to 25/10)
+* **Core Topics:**
+  * Using AI to turn a market hypothesis into a precise, testable strategy specification.
+  * AI-assisted data exploration, feature ideas, research-code scaffolding, and interpretation of backtest results.
+  * Verification, reproducibility, and responsible use: checking generated code, avoiding fabricated data or citations, protecting sensitive information, and preventing data leakage.
+* **Technical Skills:**
+  * Writing effective prompts and structured instructions for quantitative research and coding tasks.
+  * Using AI to generate tests, identify backtesting flaws, explain diagnostics, and document assumptions without outsourcing judgment.
+  * Comparing AI-assisted implementations with a simple independently verified baseline.
+* **Deliverable / Lab:**
+  * **Lab 4:** Use AI to develop a candidate trading strategy from a stated hypothesis, produce a reproducible backtest specification and implementation, and critique the result for look-ahead bias, unrealistic execution, overfitting, and unsupported claims. Compare the AI-assisted strategy with a transparent baseline before considering it for the paper-trading portfolio.
+
+---
+
+### Week 5: Multi-Factor Models & Asset Pricing (26/10 to 1/11)
 * **Core Topics:**
   * Capital Asset Pricing Model (CAPM) and idiosyncratic risk.
   * Fama-French 3-Factor (Market, SMB, HML) and 5-Factor models (RMW, CMA).
@@ -82,26 +97,13 @@ Students work in teams of two on one quantitative-finance research question thro
   * Rolling factor beta attribution and alpha estimation ($t$-statistics and $p$-values).
   * Dimensionality reduction using `scikit-learn.decomposition.PCA`.
 * **Deliverable / Lab:**
-  * **Lab 4:** Download historical Fama-French factor returns. Deconstruct the performance of an actively managed fund (e.g., Berkshire Hathaway or ARKK) to isolate true manager alpha from systemic factor exposures.
+  * **Lab 5:** Download historical Fama-French factor returns. Deconstruct the performance of an actively managed fund (e.g., Berkshire Hathaway or ARKK) to isolate true manager alpha from systemic factor exposures.
 
 ---
 
-## Phase 3: Time Series Econometrics & Statistical Arbitrage (Weeks 5–6)
+## Phase 3: Statistical Arbitrage (Week 6)
 
-### Week 5: Time Series Econometrics & Volatility Modeling
-* **Core Topics:**
-  * Stationarity, unit roots, and why financial returns are preferred to prices for modeling.
-  * A practical introduction to the Augmented Dickey-Fuller (ADF) test and interpreting autocorrelation.
-  * Volatility clustering and the basic ARCH/GARCH framework.
-* **Technical Skills:**
-  * Transforming price data into returns and inspecting ACF plots.
-  * Fitting and interpreting a simple GARCH model using the `arch` Python package.
-* **Deliverable / Lab:**
-  * **Lab 5:** Test the stationarity of S&P 500 prices and returns, visualize volatility clustering, and use a simple GARCH model to produce a short-horizon volatility forecast.
-
----
-
-### Week 6: Cointegration & Pairs Trading (Statistical Arbitrage)
+### Week 6: Cointegration & Pairs Trading (Statistical Arbitrage) (2/11 to 8/11)
 * **Core Topics:**
   * Correlation versus Cointegration ($I(1)$ series cointegrated to $I(0)$ spread).
   * Engle-Granger two-step method and the Johansen test.
@@ -114,9 +116,9 @@ Students work in teams of two on one quantitative-finance research question thro
 
 ---
 
-## Phase 4: Machine Learning & Risk Analytics (Weeks 7–8)
+## Phase 4: Machine Learning, Risk Analytics & Options (Weeks 7–10)
 
-### Week 7: Machine Learning for Return Direction & Cross-Sectional Ranking
+### Week 7: Machine Learning for Return Direction & Cross-Sectional Ranking (9/11 to 15/11)
 * **Core Topics:**
   * Classification of positive versus negative future returns.
   * Cross-sectional ranking of stocks by expected relative return.
@@ -131,7 +133,36 @@ Students work in teams of two on one quantitative-finance research question thro
 
 ---
 
-### Week 8: Risk Management & Capstone Strategy Showcase
+### Week 8: Introduction to Options & Option Pricing (16/11 to 22/11)
+* **Core Topics:**
+  * Call and put options, contract terms, payoff diagrams, moneyness, intrinsic value, and time value.
+  * No-arbitrage pricing and the binomial option-pricing model.
+  * Black-Scholes pricing, assumptions, sensitivities (the Greeks), and implied volatility.
+  * Monte Carlo simulation for pricing and evaluating path-dependent options.
+* **Technical Skills:**
+  * Implementing binomial-tree, Black-Scholes, and Monte Carlo pricing models in Python.
+  * Comparing model prices with market prices and interpreting sources of pricing error.
+  * Using option-pricing outputs to evaluate hedging, risk, and strategy design assumptions.
+* **Deliverable / Lab:**
+  * **Lab 8:** Price a selected option using a binomial tree, Black-Scholes, and Monte Carlo simulation. Compare the results across assumptions and explain the implications for risk and trading decisions.
+
+---
+
+### Week 9: Option Greeks & Risk Sensitivities (23/11 to 29/11)
+* **Core Topics:**
+  * Delta, gamma, vega, theta, and rho as measures of option-price sensitivity.
+  * How spot price, volatility, time to expiry, interest rates, and dividends affect option value and risk.
+  * Delta hedging, gamma exposure, volatility exposure, and P&L attribution across changing market conditions.
+* **Technical Skills:**
+  * Calculating Greeks analytically and validating them with finite-difference approximations.
+  * Building risk reports for single options and multi-leg positions.
+  * Stress-testing Greek exposures across price, volatility, time, and interest-rate scenarios.
+* **Deliverable / Lab:**
+  * **Lab 9:** Calculate and visualize the Greeks for a selected option or multi-leg position, validate the results with finite differences, and simulate a delta-hedging strategy. Report hedging error, P&L attribution, and sensitivity to volatility and time decay.
+
+---
+
+### Week 10: Risk Management & Capstone Strategy Showcase (30/11 to 6/12)
 * **Core Topics:**
   * Value at Risk (VaR): Parametric, Historical, and Monte Carlo approaches.
   * Coherent risk measures: Expected Shortfall (CVaR).
@@ -140,11 +171,12 @@ Students work in teams of two on one quantitative-finance research question thro
   * Consolidating execution, factor exposures, and risk reporting into unified dashboards.
   * Generating tear-sheets using `quantstats`.
 * **Deliverable / Capstone:**
-  * **Lab 8:** Produce a quantitative risk report using VaR, Expected Shortfall, drawdown analysis, and stress-testing scenarios.
-  * **Final Showcase:** Student teams present their research project and its quantitative investment or trading implications to the club.
-    * **Requirements:**
-      1. Economic/market anomaly thesis.
-      2. Factor exposure and risk decomposition.
-      3. Out-of-sample backtest with transaction costs.
-      4. Risk report (VaR, CVaR, drawdown duration).
-      5. Execution/liquidity constraints.
+  * **Lab 10:** Produce a quantitative risk report using VaR, Expected Shortfall, drawdown analysis, and stress-testing scenarios.
+  * **Final Showcase:** The team presents its research project and proposed trading strategy to the club for consideration in the paper-trading portfolio.
+  * **Requirements:**
+    1. Economic/market anomaly thesis.
+    2. Factor exposure and risk decomposition.
+    3. Out-of-sample backtest with transaction costs.
+    4. Risk report (VaR, CVaR, drawdown duration).
+    5. Execution/liquidity constraints.
+    6. Explicit signal, position-sizing, rebalancing, and risk-limit rules suitable for paper trading.
