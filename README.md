@@ -3,7 +3,7 @@
 ## Program Overview
 This curriculum bridges traditional economic and finance theory with quantitative implementation, machine learning, time-series econometrics, and algorithmic backtesting in Python. 
 
-* **Prerequisites:** Introductory Micro/Macroeconomics, basic statistics, Linear Algebra, Multivariable Calculus, and basic Python familiarity (`pandas`, `numpy`).
+* **Prerequisites:** Introductory Micro/Macroeconomics, basic statistics, Linear Algebra, and Multivariable Calculus. No prior programming or Git experience is required.
 * **Core Tooling:** `numpy`, `pandas`, `scipy`, `statsmodels`, `scikit-learn`, `matplotlib`/`seaborn`, `yfinance`.
 
 ## Semester Research Project
@@ -27,6 +27,19 @@ Each team works on one quantitative-finance research question throughout the sem
 * **Options-based tail-risk protection:** Can a systematic protective-put or put-spread overlay improve portfolio resilience at an acceptable long-run cost?
 * **Delta-hedged volatility strategies:** Does trading the difference between implied and realized volatility generate robust returns after hedging costs and option-market frictions?
 * **Multi-signal portfolio construction:** Does combining momentum, value, mean reversion, and defensive signals with portfolio-level risk limits improve stability and reduce factor concentration?
+
+---
+
+## Week 0: Computing & Collaboration for Total Beginners (Optional)
+
+Week 0 is a hands-on orientation for members who have never programmed or used developer tools. The goal is not to master every tool, but to become comfortable opening a notebook, running small experiments, reading simple errors, and keeping work reproducible.
+
+* **Python basics:** Variables, strings, numbers, lists, dictionaries, `for` loops, conditionals, functions, imports, and reading error messages. Practice by writing small calculations and a function that summarizes a list of prices.
+* **Jupyter basics:** Create and run a notebook, understand the difference between Markdown and code cells, restart the kernel, run cells in order, and save a notebook with outputs. Learn why a notebook should be rerun from a clean kernel before it is shared.
+* **pandas basics:** Load a small CSV, inspect a `DataFrame` with `head`, `shape`, `info`, and `describe`, select columns and rows, handle missing values, and make one simple plot.
+* **Git basics:** Install or verify Git, configure a username, initialize or clone a repository, check status, add files, commit changes, inspect history, and understand the difference between a local commit and a remote repository.
+* **GitHub basics:** Create or join the club repository, clone it, create a branch, push a commit, open a pull request, review a change, and pull updates from the shared repository. Never commit passwords, API keys, or private data.
+* **Working habits:** Use clear filenames, keep one idea per notebook, write short Markdown explanations next to code, and record the data source and assumptions for every analysis.
 
 ---
 
@@ -174,7 +187,7 @@ Each team works on one quantitative-finance research question throughout the sem
   * Generating tear-sheets using `quantstats`.
 * **Deliverable / Capstone:**
   * **Lab 10:** Produce a quantitative risk report using VaR, Expected Shortfall, drawdown analysis, and stress-testing scenarios.
-  * **Final Showcase:** The team presents its research project and proposed trading strategy to the club for consideration in the paper-trading portfolio.
+* **Final Showcase:** The team presents its research project and proposed trading strategy to the club for consideration in the paper-trading portfolio.
   * **Requirements:**
     1. Economic/market anomaly thesis.
     2. Factor exposure and risk decomposition.
