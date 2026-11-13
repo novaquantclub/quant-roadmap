@@ -3,5 +3,9 @@ pandas
 matplotlib
 seaborn
 yfinance
-yfinance 
 seaborn
+scikit-learn
+torch
+tqdm
+xgboost
+statsmodels
